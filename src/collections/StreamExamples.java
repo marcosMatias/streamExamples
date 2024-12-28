@@ -54,6 +54,15 @@ public class StreamExamples {
                 .reduce((n1, n2) -> n1 + n2);
 
         System.out.println("Total das idades: " + reduce.get());
+        
+        
+        
+         // usando reduce para concatencao
+        Optional<String> concatenacao = pessoas.stream()
+                .map(c -> c.getNome())
+                .reduce((s1, s2) -> s1.concat(s2));
+ 
+             System.out.println("Concatenacao: " + concatenacao.get());
 
         System.out.println("\n*****************************************************************\n");
 
